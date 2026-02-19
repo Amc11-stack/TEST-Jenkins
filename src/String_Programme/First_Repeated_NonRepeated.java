@@ -9,6 +9,7 @@ public class First_Repeated_NonRepeated {
 
     public static void main(String[] args) {
 
+
         String ss= "Aman kumar Choudhury Haider";
 
        char[] ch= ss.replace(" ","").toCharArray();

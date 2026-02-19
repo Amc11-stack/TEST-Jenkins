@@ -1,32 +1,37 @@
 package Array;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class DuplicateElement {
 
-    public static void duplicateelement(int[] arr){
+    public static Integer[] duplicateelement(int[] arr){
 
         HashSet<Integer> hs= new HashSet<>();
-        HashSet<Integer> dpElements = new HashSet<>();
+
+        ArrayList<Integer> li= new ArrayList<>();
+
 
         for(int b:arr){
 
-            if(!hs.add(b)){
-
-                dpElements.add(b);
-            }
+           if(!hs.contains(b)){
+               hs.add(b);
+           }
+           else {
+               li.add(b);
+           }
 
         }
 
-        System.out.println(dpElements);
-        System.out.println(hs);
+       return  li.toArray(new Integer[0]);
     }
 
     public static void main(String[] args) {
 
-        int[] aa= new int[]{1, 2, 3, 4, 5, 2, 6, 4, 7, 8, 3};
+        int[] aa= {1, 2, 3, 4, 5, 2, 6, 4, 7, 8, 3};
 
-        duplicateelement(aa);
+        System.out.println(Arrays.toString(duplicateelement(aa)));
 
     }
 }

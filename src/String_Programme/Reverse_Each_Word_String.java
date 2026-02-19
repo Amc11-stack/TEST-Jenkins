@@ -14,7 +14,7 @@ public class Reverse_Each_Word_String {
 
         String[] words= str.split(" ");
 
-        StringBuilder ss= new StringBuilder();
+
 
 
 
@@ -23,17 +23,18 @@ public class Reverse_Each_Word_String {
         for(int i=0;i<words.length;i++)
         {
             String word=words[i];
+            StringBuilder ss= new StringBuilder();
 
             for(int j= word.length()-1;j>=0;j--){
 
-                ss=ss.append(word.charAt(j));
+                ss.append(word.charAt(j));
             }
-            s=ss+" ";
+            s += ss.toString() + " ";
         }
 System.out.println(s);
 
-  s=  Arrays.stream(words).map(x->new StringBuilder(x).reverse().toString()).collect(Collectors.joining(" "));
-
-        System.out.println(s);
+//  s=  Arrays.stream(words).map(x->new StringBuilder(x).reverse().toString()).collect(Collectors.joining(" "));
+//
+//        System.out.println(s);
     }
 }
